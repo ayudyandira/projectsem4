@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context=".MainActivity">
+
+    <!-- Teks Judul -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Your Email"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password akan tampil di sini"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <!-- Gambar Kepala -->
+    <ImageView
+        android:id="@+id/imageHead"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/body"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Gambar Janggut -->
+    <ImageView
+        android:id="@+id/imageBeard"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/beard"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/imageHead"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/imageHead"
+        app:layout_constraintTop_toTopOf="@id/imageMoustache" />
+
+    <!-- Gambar Rambut -->
+    <ImageView
+        android:id="@+id/imageHair"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:src="@drawable/hair"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="@id/imageHead"
+        app:layout_constraintStart_toStartOf="@id/imageHead"
+        app:layout_constraintEnd_toEndOf="@id/imageHead"/>
+
+    <!-- Gambar Mata -->
+    <ImageView
+        android:id="@+id/imageEyes"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:src="@drawable/eyes"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/imageHair"
+        app:layout_constraintStart_toStartOf="@id/imageHead"
+        app:layout_constraintEnd_toEndOf="@id/imageHead"/>
+
+    <!-- Gambar Alis -->
+
+    <!-- Gambar Kumis -->
+
+    <ImageView
+        android:id="@+id/imageEyebrows"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:src="@drawable/eyebrow"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/imageHead"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@id/imageHead"
+        app:layout_constraintBottom_toTopOf="@id/imageEyes" />
+
+    <ImageView
+        android:id="@+id/imageMoustache"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:src="@drawable/moustache"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/imageEyes"
+        app:layout_constraintStart_toStartOf="@id/imageHead"
+        app:layout_constraintEnd_toEndOf="@id/imageHead"/>
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_button"
+        android:layout_marginTop="5dp"
+        android:text="Contact Us"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/layoutCheckbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+
+
+
+
+    <!-- Checkbox Layout -->
+    <LinearLayout
+        android:id="@+id/layoutCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/imageHead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <CheckBox
+            android:id="@+id/checkHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Head"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingStart="20dp"
+            android:checked="true"
+            android:buttonTint="#FF69B4"/>
+
+        <CheckBox
+            android:id="@+id/checkHair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hair"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingStart="20dp"
+            android:checked="true"
+            android:buttonTint="#FF69B4"/>
+
+        <CheckBox
+            android:id="@+id/checkMoustache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Moustache"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingStart="20dp"
+            android:checked="true"
+            android:buttonTint="#FF69B4"/>
+
+        <CheckBox
+            android:id="@+id/checkEyes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eyes"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingStart="20dp"
+            android:checked="true"
+            android:buttonTint="#FF69B4"/>
+
+        <CheckBox
+            android:id="@+id/checkEyebrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eyebrow"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingStart="20dp"
+            android:checked="true"
+            android:buttonTint="#FF69B4"/>
+
+        <CheckBox
+            android:id="@+id/checkBeard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beard"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingStart="20dp"
+            android:checked="true"
+            android:buttonTint="#FF69B4" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
