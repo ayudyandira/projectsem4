@@ -15,7 +15,6 @@
         android:theme="@style/Theme.ModulLayout"
         tools:targetApi="31">
 
-        <!-- Tambahkan deklarasi MainActivity -->
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -27,5 +26,6 @@
         <activity android:name=".ContactListActivity"/>
 
     </application>
+
 
 </manifest>
